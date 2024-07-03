@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="payment.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="successNotification">
+    <div class="notificationContent">
+        <h2>Payment Successful!</h2>
+        <button id="closeNotification">Close</button> <!-- Button to close the notification -->
+    </div>
+</div>
+
+<!-- JavaScript to handle the redirection on clicking the close button -->
+<script>
+    document.getElementById('closeNotification').addEventListener('click', function() {
+        // Redirects to the home page
+        window.location.href = 'index.html';
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+body {
+    margin: 20px;
+    padding: 25px;
+    font-family: 'Arial', sans-serif; /* Set a clean, readable font */
+    background-color: #e4c3c3; /* Soft background color for reduced eye strain */
+    color: #000000; /* Default text color for readability */
+    line-height: 1.6; /* Default line spacing for better text readability */
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+  }
+
+/* CSS for the custom notification */
+.hidden {
+    display: none;
+}
+
+#successNotification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(133, 208, 228);
+    padding: 20px;
+    border: 1px solid rgb(217, 205, 72);
+    box-shadow: 4px 4px 4px rgba(229, 131, 3, 0.89);
+    z-index: 1000;
+}
+
+#successNotification .notificationContent {
+    text-align: center;
+}
+
+#successNotification #closeNotification {
+    margin-top: 10px;
+}

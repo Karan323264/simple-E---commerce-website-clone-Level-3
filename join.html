@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Registration Form</title>
+  <link rel="stylesheet" href="form.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form id="registrationForm">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <div class="password-wrapper">
+              <input type="password" id="password" placeholder="Enter your password" required>
+              <span class="toggle-password" data-target="password">&#128065;</span>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <div class="password-wrapper">
+              <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+              <span class="toggle-password" data-target="confirm-password">&#128065;</span>
+            </div>
+          </div>
+        </div>
+        <div class="gender-details">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+              <input type="radio" name="gender" id="dot-1" required>
+              <span class="dot"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <input type="radio" name="gender" id="dot-2" required>
+              <span class="dot"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <input type="radio" name="gender" id="dot-3" required>
+              <span class="dot"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div id="error-message" class="error-message"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for success message -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Registration Successful!</h2>
+      <p>Thank you for registering. You will receive a confirmation email soon.</p>
+    </div>
+  </div>
+  <!-- JavaScript to handle the redirection on clicking the close button -->
+<script>
+  document.getElementById('closeNotification').addEventListener('click', function() {
+      // Redirects to the home page
+      window.location.href = 'index.html';
+  });
+</script>
+  <script src="registration.js"></script>
+</body>
+</html>
